@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "name": "Cyber Apple",
+    "price": 45,
+    "category": "fruits",
+    "stock": 120,
+    "description": "Nano-enhanced Fuji apples from the hydroponic towers of Neo-Mumbai.",
+    "image_url": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=500&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Quantum Mango",
+    "price": 120,
+    "category": "fruits",
+    "stock": 80,
+    "description": "Premium Alphonso mangoes irradiated for peak bio-ripeness.",
+    "image_url": "https://images.unsplash.com/photo-1553279768-865429fa0078?w=500&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Synth Banana",
+    "price": 40,
+    "category": "fruits",
+    "stock": 200,
+    "description": "Molecularly-structured Cavendish. Potassium off-chart.",
+    "image_url": "https://images.unsplash.com/photo-1543218024-57a70143c369?w=500&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Pixel Berries",
+    "price": 180,
+    "category": "fruits",
+    "stock": 55,
+    "description": "Mixed antioxidant berries — lab-certified freshness.",
+    "image_url": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=500&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Neon Broccoli",
+    "price": 60,
+    "category": "veggies",
+    "stock": 90,
+    "description": "Bioluminescent-grade organic broccoli.",
+    "image_url": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=500&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Pixel Tomatoes",
+    "price": 50,
+    "category": "veggies",
+    "stock": 150,
+    "description": "Vine-ripened in LED farms. Resolution: 4K flavor.",
+    "image_url": "https://images.unsplash.com/photo-1471194402529-8e0f5cf8d51f?w=500&q=80"
+  },
+  {
+    "id": 7,
+    "name": "Matrix Spinach",
+    "price": 75,
+    "category": "veggies",
+    "stock": 110,
+    "description": "Iron-fortified nano-spinach from orbital stations.",
+    "image_url": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500&q=80"
+  },
+  {
+    "id": 8,
+    "name": "Cyber Carrots",
+    "price": 55,
+    "category": "veggies",
+    "stock": 180,
+    "description": "Beta-carotene enhanced. Max crunch rating.",
+    "image_url": "https://images.unsplash.com/photo-1447175008436-054170c2e979?w=500&q=80"
+  },
+  {
+    "id": 9,
+    "name": "Holo Milk",
+    "price": 55,
+    "category": "dairy",
+    "stock": 75,
+    "description": "Ultra-pasteurized. Full-fat cyber grade.",
+    "image_url": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=500&q=80"
+  },
+  {
+    "id": 10,
+    "name": "Zero Cheese",
+    "price": 180,
+    "category": "dairy",
+    "stock": 40,
+    "description": "Cryo-vault aged 60 days. Sharp and cyber-smooth.",
+    "image_url": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a318?w=500&q=80"
+  },
+  {
+    "id": 11,
+    "name": "Plasma Chips",
+    "price": 35,
+    "category": "snacks",
+    "stock": 300,
+    "description": "Fried in arc-energy oil. Max overdrive crunch.",
+    "image_url": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=500&q=80"
+  },
+  {
+    "id": 12,
+    "name": "Dark Matter Bar",
+    "price": 65,
+    "category": "snacks",
+    "stock": 220,
+    "description": "40g protein — forged in the void. Zero sugar.",
+    "image_url": "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=500&q=80"
+  },
+  {
+    "id": 13,
+    "name": "Grid Coffee",
+    "price": 299,
+    "category": "beverages",
+    "stock": 50,
+    "description": "Arabica in zero-G labs. Brews at warp speed.",
+    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80"
+  },
+  {
+    "id": 14,
+    "name": "Volt Energy",
+    "price": 80,
+    "category": "beverages",
+    "stock": 180,
+    "description": "Electrolyte surge in every can.",
+    "image_url": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?w=500&q=80"
+  },
+  {
+    "id": 15,
+    "name": "Neon OJ",
+    "price": 90,
+    "category": "beverages",
+    "stock": 120,
+    "description": "Cold-pressed in fluorescent orchards.",
+    "image_url": "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&q=80"
+  },
+  {
+    "id": 16,
+    "name": "Cyber Rice",
+    "price": 85,
+    "category": "grains",
+    "stock": 200,
+    "description": "Basmati aged in sealed vaults. Extra long grain.",
+    "image_url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&q=80"
+  },
+  {
+    "id": 17,
+    "name": "Quantum Wheat",
+    "price": 70,
+    "category": "grains",
+    "stock": 150,
+    "description": "Fortified whole wheat from orbital greenhouses.",
+    "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80"
+  },
+  {
+    "id": 18,
+    "name": "Matrix Oats",
+    "price": 110,
+    "category": "grains",
+    "stock": 90,
+    "description": "Rolled in nano-mills. High beta-glucan.",
+    "image_url": "https://images.unsplash.com/photo-1505253304499-671c55fb57fe?w=500&q=80"
+  }
+]

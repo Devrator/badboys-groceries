@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BADBOYS GROCERIES — V2 CYBER EDITION</title>
+
+  <!-- ── Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- ── GSAP ── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+
+  <!-- ── Three.js ── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- ── Lenis Smooth Scroll ── -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+
+  <!-- ── Supabase ── -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="loading">
+
+  <!-- ═══════════════════════════════════════════
+       CURSOR
+  ═══════════════════════════════════════════ -->
+  <div id="cursor">
+    <div id="cursor-inner"></div>
+    <div id="cursor-outer"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SCROLL PROGRESS
+  ═══════════════════════════════════════════ -->
+  <div id="scroll-bar">
+    <div id="scroll-fill"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       PAGE LOADER
+  ═══════════════════════════════════════════ -->
+  <div id="loader">
+    <div class="loader-logo">
+      <span class="loader-bb">BADBOYS</span>
+      <span class="loader-sub">GROCERIES // V2</span>
+    </div>
+    <div class="loader-track">
+      <div class="loader-progress" id="loaderProgress"></div>
+    </div>
+    <div class="loader-pct" id="loaderPct">000</div>
+    <div class="loader-scan"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════ -->
+  <nav id="nav">
+    <a class="nav-logo" href="#hero">
+      <span class="nav-logo-main">BB</span>
+      <span class="nav-logo-dot">.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#story" class="nl">STORY</a></li>
+      <li><a href="#features" class="nl">WHY US</a></li>
+      <li><a href="#shop" class="nl">SHOP</a></li>
+    </ul>
+    <div class="nav-right">
+      <button id="searchToggle" class="icon-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button id="cartToggle" class="icon-btn cart-icon" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span id="cartCount" class="cart-count">0</span>
+      </button>
+      <button id="loginBtn" class="btn-nav">LOGIN</button>
+    </div>
+    <div class="nav-line"></div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       SEARCH OVERLAY
+  ═══════════════════════════════════════════ -->
+  <div id="searchOverlay" class="search-overlay">
+    <div class="search-inner">
+      <input type="text" id="searchInput" class="search-field" placeholder="SEARCH PRODUCTS..." autocomplete="off" />
+      <button id="searchClose" class="search-close">✕</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1 — HERO (Three.js)
+  ═══════════════════════════════════════════ -->
+  <section id="hero" class="section-hero">
+    <canvas id="threeCanvas"></canvas>
+
+    <!-- Scan grid -->
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-scanlines"></div>
+
+    <!-- Floating particles (CSS) -->
+    <div class="particle-field" id="particleField"></div>
+
+    <div class="hero-content" id="heroContent">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">EST. 2077 // CYBER EDITION</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h1 class="hero-title">
+        <span class="ht-line" data-text="BAD">BAD</span>
+        <span class="ht-line accent" data-text="BOYS">BOYS</span>
+        <span class="ht-line thin" data-text="GROCERIES">GROCERIES</span>
+      </h1>
+      <p class="hero-desc">The future of grocery shopping.<br/>Neon aisles. Zero wait. Pure cyber.</p>
+      <div class="hero-cta">
+        <a href="#shop" class="btn-primary">ENTER SHOP</a>
+        <a href="#story" class="btn-ghost">OUR STORY ↓</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-hint-line"></div>
+    </div>
+
+    <!-- Neon frame corners -->
+    <div class="frame tl"></div>
+    <div class="frame tr"></div>
+    <div class="frame bl"></div>
+    <div class="frame br"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2 — STORY (Cyberfiction Sticky Scroll)
+  ═══════════════════════════════════════════ -->
+  <section id="story" class="section-story">
+    <div class="story-sticky">
+      <!-- Canvas/Visual Side -->
+      <div class="story-visual" id="storyVisual">
+        <div class="story-panel" data-panel="0">
+          <div class="panel-glyph">⚡</div>
+          <div class="panel-bg" style="background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(0,212,255,0.15), transparent)"></div>
+        </div>
+        <div class="story-panel" data-panel="1">
+          <div class="panel-glyph">🌐</div>
+          <div class="panel-bg" style="background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(255,45,120,0.12), transparent)"></div>
+        </div>
+        <div class="story-panel" data-panel="2">
+          <div class="panel-glyph">🛡</div>
+          <div class="panel-bg" style="background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(57,255,20,0.12), transparent)"></div>
+        </div>
+        <div class="story-panel" data-panel="3">
+          <div class="panel-glyph">🚀</div>
+          <div class="panel-bg" style="background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(191,90,242,0.12), transparent)"></div>
+        </div>
+        <!-- Progress dots -->
+        <div class="story-dots" id="storyDots">
+          <span class="dot active" data-i="0"></span>
+          <span class="dot" data-i="1"></span>
+          <span class="dot" data-i="2"></span>
+          <span class="dot" data-i="3"></span>
+        </div>
+      </div>
+
+      <!-- Text Side -->
+      <div class="story-text-wrap" id="storyTextWrap">
+        <div class="story-chapter" data-chapter="0">
+          <div class="chapter-num">01</div>
+          <h2 class="chapter-title">THE ORIGIN</h2>
+          <p class="chapter-body">Born from the neon streets of Neo-Mumbai, Badboys Groceries was founded by rogue agents who believed fresh produce deserved a cyberpunk upgrade. No more dull aisles.</p>
+          <div class="chapter-stat"><span class="stat-val">2077</span><span class="stat-label">Founded</span></div>
+        </div>
+        <div class="story-chapter" data-chapter="1">
+          <div class="chapter-num">02</div>
+          <h2 class="chapter-title">THE NETWORK</h2>
+          <p class="chapter-body">Connected to 500+ nano-farms across the cyber-grid. Every vegetable scanned, every fruit quantum-verified. Real food from the real future delivered at warp speed.</p>
+          <div class="chapter-stat"><span class="stat-val">500+</span><span class="stat-label">Farms</span></div>
+        </div>
+        <div class="story-chapter" data-chapter="2">
+          <div class="chapter-num">03</div>
+          <h2 class="chapter-title">THE SHIELD</h2>
+          <p class="chapter-body">Military-grade encryption on every transaction. Your data is locked behind a blockchain firewall. Shop freely — the Badboys security grid never sleeps.</p>
+          <div class="chapter-stat"><span class="stat-val">100%</span><span class="stat-label">Secure</span></div>
+        </div>
+        <div class="story-chapter" data-chapter="3">
+          <div class="chapter-num">04</div>
+          <h2 class="chapter-title">THE MISSION</h2>
+          <p class="chapter-body">To put the freshest, most cyber-enhanced groceries in every hand — from Neo-Mumbai to the outer colonies. Fast. Secure. Legendary.</p>
+          <div class="chapter-stat"><span class="stat-val">10K+</span><span class="stat-label">Customers</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3 — HORIZONTAL SCROLL (Features)
+  ═══════════════════════════════════════════ -->
+  <section id="features" class="section-features">
+    <div class="features-sticky">
+      <div class="features-header">
+        <div class="tag-label">// WHY BADBOYS //</div>
+        <h2 class="features-title">CYBER<br/><em>POWERED</em></h2>
+      </div>
+      <div class="features-track-wrap">
+        <div class="features-track" id="featuresTrack">
+          <div class="feat-card">
+            <div class="feat-num">01</div>
+            <div class="feat-icon">⚡</div>
+            <h3 class="feat-title">INSTANT DELIVERY</h3>
+            <p class="feat-desc">Drone-dispatched within 30 mins. Our cyber-logistics never buffer.</p>
+            <div class="feat-glow"></div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-num">02</div>
+            <div class="feat-icon">🛡️</div>
+            <h3 class="feat-title">ZERO-TRUST SECURITY</h3>
+            <p class="feat-desc">Every transaction encrypted at the quantum level. Your details are unhackable.</p>
+            <div class="feat-glow"></div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-num">03</div>
+            <div class="feat-icon">🌐</div>
+            <h3 class="feat-title">ALWAYS ONLINE</h3>
+            <p class="feat-desc">24/7 cyber-store uptime. Shop from any node in the grid at any time.</p>
+            <div class="feat-glow"></div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-num">04</div>
+            <div class="feat-icon">🔬</div>
+            <h3 class="feat-title">NANO-VERIFIED</h3>
+            <p class="feat-desc">Every product scanned at the nano-level for freshness before dispatch.</p>
+            <div class="feat-glow"></div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-num">05</div>
+            <div class="feat-icon">💎</div>
+            <h3 class="feat-title">PREMIUM ONLY</h3>
+            <p class="feat-desc">Curated selection from the finest cyber-farms and hydroponic towers worldwide.</p>
+            <div class="feat-glow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="features-progress-line">
+        <div class="fpl-fill" id="fplFill"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4 — SHOP
+  ═══════════════════════════════════════════ -->
+  <section id="shop" class="section-shop">
+    <div class="shop-header">
+      <div class="tag-label">// THE SHOP //</div>
+      <h2 class="shop-title">CYBER<br/><span class="accent-text">MARKET</span></h2>
+      <p class="shop-desc">Fresh from the nano-farms. Updated in real-time.</p>
+    </div>
+
+    <!-- Category filter pills -->
+    <div class="cat-pills" id="catPills">
+      <button class="pill active" data-cat="all">ALL</button>
+      <button class="pill" data-cat="fruits">FRUITS</button>
+      <button class="pill" data-cat="veggies">VEGGIES</button>
+      <button class="pill" data-cat="dairy">DAIRY</button>
+      <button class="pill" data-cat="snacks">SNACKS</button>
+      <button class="pill" data-cat="beverages">DRINKS</button>
+      <button class="pill" data-cat="grains">GRAINS</button>
+    </div>
+
+    <!-- Products grid -->
+    <div class="products-grid" id="productsGrid">
+      <div class="grid-loading" id="gridLoading">
+        <div class="load-ring"></div>
+        <span>LOADING PRODUCTS...</span>
+      </div>
+    </div>
+
+    <div class="load-more-wrap">
+      <button id="loadMoreBtn" class="btn-ghost" style="display:none">LOAD MORE</button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 5 — CHECKOUT
+  ═══════════════════════════════════════════ -->
+  <section id="checkout" class="section-checkout">
+    <div class="checkout-inner">
+      <div class="checkout-left">
+        <div class="tag-label">// YOUR ORDER //</div>
+        <h2 class="checkout-title">CART &amp;<br/><span class="accent-text">CHECKOUT</span></h2>
+        <div class="order-lines" id="orderLines">
+          <div class="empty-cart-msg" id="emptyMsg">
+            <span class="empty-icon">🛒</span>
+            <p>YOUR CART IS EMPTY</p>
+            <a href="#shop" class="btn-ghost" style="margin-top:1rem;display:inline-block">GO SHOP</a>
+          </div>
+        </div>
+      </div>
+      <div class="checkout-right" id="checkoutSummary" style="opacity:0;pointer-events:none">
+        <div class="summary-card">
+          <h3 class="summary-title">ORDER SUMMARY</h3>
+          <div class="summary-row"><span>Subtotal</span><span id="co-subtotal">₹0.00</span></div>
+          <div class="summary-row"><span>Delivery</span><span class="green">FREE</span></div>
+          <div class="summary-row total"><span>TOTAL</span><span id="co-total">₹0.00</span></div>
+
+          <!-- Delivery Info -->
+          <div class="delivery-form" id="deliveryForm">
+            <input type="text" class="co-input" id="coName" placeholder="FULL NAME" />
+            <input type="text" class="co-input" id="coPhone" placeholder="PHONE" />
+            <input type="text" class="co-input" id="coAddress" placeholder="DELIVERY ADDRESS" />
+          </div>
+
+          <button class="btn-primary full" id="placeOrderBtn">PLACE ORDER</button>
+          <button class="btn-ghost full" id="clearCartBtn" style="margin-top:.7rem">CLEAR CART</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="fb-logo">BADBOYS</div>
+        <div class="fb-sub">GROCERIES // V2</div>
+        <p class="fb-tagline">The future of grocery shopping<br/>is already here.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>NAVIGATE</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#story">Story</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#checkout">Checkout</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>CONNECT</h4>
+        <p>cyber@badboys.net</p>
+        <p>+91 00000 00000</p>
+        <div class="social-row">
+          <span class="s-btn">TW</span>
+          <span class="s-btn">IG</span>
+          <span class="s-btn">YT</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2077 BADBOYS GROCERIES // ALL RIGHTS RESERVED</span>
+      <span id="adminTrigger" class="admin-trig" title="Admin Panel">⚙</span>
+    </div>
+    <div class="footer-line-scan"></div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       CART SIDEBAR
+  ═══════════════════════════════════════════ -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cs-header">
+      <h3>CART <span id="cs-count" class="cs-badge">0</span></h3>
+      <button id="cartClose" class="cs-close">✕</button>
+    </div>
+    <div class="cs-items" id="csItems">
+      <div class="cs-empty">Cart is empty</div>
+    </div>
+    <div class="cs-footer" id="csFooter" style="display:none">
+      <div class="cs-total">TOTAL: <strong id="cs-total">₹0.00</strong></div>
+      <a href="#checkout" id="cs-checkout" class="btn-primary full">CHECKOUT</a>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <!-- ═══════════════════════════════════════════
+       PRODUCT QUICK VIEW MODAL
+  ═══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="productModal">
+    <div class="product-modal" id="productModalInner">
+      <button class="modal-close" id="productModalClose">✕</button>
+      <div class="pm-img-wrap">
+        <img id="pmImg" src="" alt="" />
+      </div>
+      <div class="pm-info">
+        <div class="pm-cat" id="pmCat"></div>
+        <h2 class="pm-name" id="pmName"></h2>
+        <p class="pm-desc" id="pmDesc"></p>
+        <div class="pm-price" id="pmPrice"></div>
+        <div class="pm-qty-row">
+          <button class="qty-btn" id="pmQtyDec">−</button>
+          <span class="pm-qty" id="pmQtyVal">1</span>
+          <button class="qty-btn" id="pmQtyInc">+</button>
+        </div>
+        <button class="btn-primary full" id="pmAddCart">ADD TO CART</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       AUTH MODAL
+  ═══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="authModal">
+    <div class="auth-modal">
+      <button class="modal-close" id="authModalClose">✕</button>
+      <div class="auth-logo">BB.</div>
+      <h2 class="auth-title">SIGN IN</h2>
+      <p class="auth-sub">Access your orders and saved cart</p>
+      <button class="btn-google" id="googleLoginBtn">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        CONTINUE WITH GOOGLE
+      </button>
+      <div class="auth-divider"><span>OR</span></div>
+      <div class="auth-form">
+        <input type="email" class="co-input" id="authEmail" placeholder="EMAIL" />
+        <input type="password" class="co-input" id="authPassword" placeholder="PASSWORD" />
+        <button class="btn-primary full" id="emailLoginBtn">LOGIN</button>
+        <button class="btn-ghost full" id="emailSignupBtn" style="margin-top:.6rem">CREATE ACCOUNT</button>
+      </div>
+      <div class="auth-msg" id="authMsg"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       ADMIN PANEL
+  ═══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="adminModal">
+    <div class="admin-modal">
+      <button class="modal-close" id="adminClose">✕</button>
+      <h2 class="auth-title">ADMIN PANEL</h2>
+      <div class="admin-tabs">
+        <button class="atab active" data-tab="add">ADD PRODUCT</button>
+        <button class="atab" data-tab="manage">MANAGE</button>
+        <button class="atab" data-tab="orders">ORDERS</button>
+      </div>
+
+      <!-- Add Product -->
+      <div class="admin-pane" id="pane-add">
+        <div class="aform-grid">
+          <input type="text" class="co-input" id="ap-name" placeholder="PRODUCT NAME" />
+          <input type="number" class="co-input" id="ap-price" placeholder="PRICE (₹)" />
+          <select class="co-input" id="ap-cat">
+            <option value="fruits">Fruits</option>
+            <option value="veggies">Veggies</option>
+            <option value="dairy">Dairy</option>
+            <option value="snacks">Snacks</option>
+            <option value="beverages">Beverages</option>
+            <option value="grains">Grains</option>
+          </select>
+          <input type="text" class="co-input" id="ap-img" placeholder="IMAGE URL" />
+          <textarea class="co-input" id="ap-desc" placeholder="DESCRIPTION" rows="3"></textarea>
+          <input type="number" class="co-input" id="ap-stock" placeholder="STOCK QTY" />
+        </div>
+        <button class="btn-primary" id="ap-submit" style="margin-top:1rem">ADD PRODUCT</button>
+        <div class="admin-msg" id="ap-msg"></div>
+      </div>
+
+      <!-- Manage Products -->
+      <div class="admin-pane hidden" id="pane-manage">
+        <div class="admin-list" id="adminList"></div>
+      </div>
+
+      <!-- Orders -->
+      <div class="admin-pane hidden" id="pane-orders">
+        <div class="admin-list" id="adminOrders"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       ORDER SUCCESS MODAL
+  ═══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="successModal">
+    <div class="success-modal">
+      <div class="success-icon">✅</div>
+      <h2>ORDER PLACED!</h2>
+      <p>Your cyber order <strong id="successOrderId"></strong> has been transmitted successfully.</p>
+      <button class="btn-primary" id="successClose">CONTINUE SHOPPING</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       TOAST
+  ═══════════════════════════════════════════ -->
+  <div id="toastWrap"></div>
+
+  <!-- ═══════════════════════════════════════════
+       FLOATING CART BUTTON
+  ═══════════════════════════════════════════ -->
+  <button class="float-cart" id="floatCart">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    <span id="floatCount">0</span>
+  </button>
+
+  <!-- ═══════════════════════════════════════════
+       USER STATUS BAR
+  ═══════════════════════════════════════════ -->
+  <div class="user-bar" id="userBar" style="display:none">
+    <span id="userEmail"></span>
+    <button class="btn-logout" id="logoutBtn">LOGOUT</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
