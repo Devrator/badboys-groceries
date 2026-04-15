@@ -1,6 +1,6 @@
 # 🛒 BADBOYS GROCERIES — V2 CYBER EDITION
 
-Cyberfiction-inspired scroll storytelling grocery website with full 3D, GSAP animations, working cart, checkout, and Supabase Google auth.
+Cyberfiction-inspired scroll storytelling grocery website with full 3D, GSAP animations, working cart, checkout, and Supabase Google auth. Now enhanced with real grocery store features!
 
 ---
 
@@ -64,6 +64,33 @@ Products and orders now persist in `backend/data/*.json`.
 
 ---
 
+## 🏪 PRODUCT CATEGORIES
+
+The store now features **11 realistic grocery categories** with 30+ products:
+
+| Category | Examples |
+|----------|----------|
+| **Fruits** | Cyber Apple, Quantum Mango, Synth Banana, Pixel Berries |
+| **Veggies** | Neon Broccoli, Pixel Tomatoes, Matrix Spinach, Cyber Carrots |
+| **Dairy** | Holo Milk, Zero Cheese, Volt Yoghurt |
+| **Meat** | Cyber Chicken Breast, Synth Beef Mince |
+| **Seafood** | Quantum Salmon Fillet, Neon Shrimp |
+| **Bakery** | Cyber Croissant, Quantum Sourdough |
+| **Frozen** | Holo Ice Cream, Matrix Frozen Pizza |
+| **Snacks** | Plasma Chips, Dark Matter Bar, Reactor Nuts |
+| **Beverages** | Grid Coffee, Volt Energy, Neon OJ |
+| **Grains** | Cyber Rice, Quantum Wheat, Matrix Oats |
+| **Pantry** | Cyber Olive Oil, Plasma Pasta |
+
+Each product includes:
+- ✅ Weight/unit information
+- ✅ Star ratings (1-5 stars)
+- ✅ Review counts
+- ✅ Nutritional information (calories, protein, carbs, fat)
+- ✅ Featured product badges
+
+---
+
 ## 🎨 DESIGN FEATURES
 
 | Feature | Tech |
@@ -91,7 +118,15 @@ Products and orders now persist in `backend/data/*.json`.
 | Feature | Status |
 |---------|--------|
 | Products load from backend/embedded data | ✅ |
-| Category filter | ✅ |
+| **30+ realistic products** across 11 categories | ✅ NEW |
+| **Product weight, units & nutritional info** | ✅ NEW |
+| **Product ratings & review counts** | ✅ NEW |
+| **Featured products carousel** | ✅ NEW |
+| **Wishlist functionality** | ✅ NEW |
+| **Payment method selection (UPI/Card/Cash)** | ✅ NEW |
+| **Store location & hours section** | ✅ NEW |
+| **Newsletter subscription** | ✅ NEW |
+| Category filter (11 categories) | ✅ |
 | Search (Ctrl+K shortcut) | ✅ |
 | Add to cart | ✅ |
 | Remove from cart | ✅ |
@@ -122,11 +157,13 @@ Click the **⚙** gear icon in the footer to open Admin Panel.
 ## 🎬 SCROLL SECTIONS
 
 1. **Hero** — 3D Three.js character, camera moves on scroll
-2. **Story** — 4-panel sticky scroll storytelling (Cyberfiction style)
-3. **Features** — Horizontal scroll track with progress bar
-4. **Shop** — Dynamic product grid with filter & search
-5. **Checkout** — Full checkout with delivery form
-6. **Footer** — Links + admin access
+2. **Featured & Deals** — NEW! Carousel of featured products with ratings, quick stats (delivery, fresh guarantee, free shipping)
+3. **Story** — 4-panel sticky scroll storytelling (Cyberfiction style)
+4. **Features** — Horizontal scroll track with progress bar
+5. **Shop** — Dynamic product grid with filter & search (11 categories)
+6. **Checkout** — Full checkout with delivery form & payment method selection (UPI/Card/Cash)
+7. **Store Info** — NEW! Store location, hours, contact details & newsletter subscription
+8. **Footer** — Links + admin access
 
 ---
 
@@ -151,3 +188,8 @@ Click the **⚙** gear icon in the footer to open Admin Panel.
 ---
 
 *Built for Badboys Groceries — V2 Cyber Edition 2077*
+/* ══════════════════════════════════════════════════════════════
+   BADBOYS GROCERIES V2 — script.js
+   Full stack: Three.js hero · GSAP scroll storytelling · Lenis
+   Supabase Google Auth · Products API · Cart · Checkout · Admin
+   ══════════════════════════════════════════════════════════════ */

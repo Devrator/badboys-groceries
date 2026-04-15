@@ -140,6 +140,58 @@
   </section>
 
   <!-- ═══════════════════════════════════════════
+       SECTION 1.5 — FEATURED & DEALS
+  ═══════════════════════════════════════════ -->
+  <section id="featured" class="section-featured">
+    <div class="featured-header">
+      <div class="tag-label">// TODAY'S DEALS //</div>
+      <h2 class="featured-title">CYBER<br/><span class="accent-text">SPECIALS</span></h2>
+      <p class="featured-desc">Limited-time offers from the grid. Updated daily.</p>
+    </div>
+    
+    <!-- Featured products carousel -->
+    <div class="featured-carousel" id="featuredCarousel">
+      <button class="carousel-btn prev" id="featPrev">←</button>
+      <div class="featured-track" id="featuredTrack">
+        <!-- Populated by JS -->
+      </div>
+      <button class="carousel-btn next" id="featNext">→</button>
+    </div>
+
+    <!-- Quick stats -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-icon">🚚</div>
+        <div class="stat-info">
+          <div class="stat-val">30 MIN</div>
+          <div class="stat-label">Express Delivery</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">✨</div>
+        <div class="stat-info">
+          <div class="stat-val">100%</div>
+          <div class="stat-label">Fresh Guarantee</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">💰</div>
+        <div class="stat-info">
+          <div class="stat-val">FREE</div>
+          <div class="stat-label">Orders Over ₹500</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🔄</div>
+        <div class="stat-info">
+          <div class="stat-val">EASY</div>
+          <div class="stat-label">Returns & Refunds</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        SECTION 2 — STORY (Cyberfiction Sticky Scroll)
   ═══════════════════════════════════════════ -->
   <section id="story" class="section-story">
@@ -271,9 +323,14 @@
       <button class="pill" data-cat="fruits">FRUITS</button>
       <button class="pill" data-cat="veggies">VEGGIES</button>
       <button class="pill" data-cat="dairy">DAIRY</button>
+      <button class="pill" data-cat="meat">MEAT</button>
+      <button class="pill" data-cat="seafood">SEAFOOD</button>
+      <button class="pill" data-cat="bakery">BAKERY</button>
+      <button class="pill" data-cat="frozen">FROZEN</button>
       <button class="pill" data-cat="snacks">SNACKS</button>
       <button class="pill" data-cat="beverages">DRINKS</button>
       <button class="pill" data-cat="grains">GRAINS</button>
+      <button class="pill" data-cat="pantry">PANTRY</button>
     </div>
 
     <!-- Products grid -->
@@ -319,9 +376,80 @@
             <input type="text" class="co-input" id="coAddress" placeholder="DELIVERY ADDRESS" />
           </div>
 
+          <!-- Payment Method -->
+          <div class="payment-section">
+            <h4 class="payment-title">PAYMENT METHOD</h4>
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="payment" value="upi" checked />
+                <span class="payment-radio"></span>
+                <span class="payment-icon">📱</span>
+                <span class="payment-label">UPI</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="card" />
+                <span class="payment-radio"></span>
+                <span class="payment-icon">💳</span>
+                <span class="payment-label">Card</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="cod" />
+                <span class="payment-radio"></span>
+                <span class="payment-icon">💵</span>
+                <span class="payment-label">Cash</span>
+              </label>
+            </div>
+          </div>
+
           <button class="btn-primary full" id="placeOrderBtn">PLACE ORDER</button>
           <button class="btn-ghost full" id="clearCartBtn" style="margin-top:.7rem">CLEAR CART</button>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       STORE INFO & NEWSLETTER
+  ═══════════════════════════════════════════ -->
+  <section id="storeinfo" class="section-storeinfo">
+    <div class="storeinfo-inner">
+      <div class="storeinfo-left">
+        <div class="tag-label">// VISIT US //</div>
+        <h2 class="storeinfo-title">STORE<br/><span class="accent-text">LOCATION</span></h2>
+        <div class="store-details">
+          <div class="store-item">
+            <div class="store-icon">📍</div>
+            <div class="store-text">
+              <strong>Address</strong>
+              <p>123 Cyber Street, Neo-Mumbai<br/>Maharashtra, 400001</p>
+            </div>
+          </div>
+          <div class="store-item">
+            <div class="store-icon">🕒</div>
+            <div class="store-text">
+              <strong>Opening Hours</strong>
+              <p>Mon - Sat: 8:00 AM - 10:00 PM<br/>Sunday: 9:00 AM - 8:00 PM</p>
+            </div>
+          </div>
+          <div class="store-item">
+            <div class="store-icon">📞</div>
+            <div class="store-text">
+              <strong>Contact</strong>
+              <p>Phone: +91 98765 43210<br/>Email: hello@badboysgroceries.cyber</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="storeinfo-right">
+        <div class="tag-label">// STAY UPDATED //</div>
+        <h2 class="newsletter-title">JOIN THE<br/><span class="accent-text">GRID</span></h2>
+        <p class="newsletter-desc">Subscribe for exclusive cyber deals and fresh arrivals.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" class="nl-input" id="nlEmail" placeholder="YOUR EMAIL ADDRESS" required />
+          <button type="submit" class="btn-primary">SUBSCRIBE</button>
+        </form>
+        <div class="nl-msg" id="nlMsg"></div>
+        <p class="nl-privacy">We respect your data. Unsubscribe anytime.</p>
       </div>
     </div>
   </section>
@@ -451,9 +579,14 @@
             <option value="fruits">Fruits</option>
             <option value="veggies">Veggies</option>
             <option value="dairy">Dairy</option>
+            <option value="meat">Meat</option>
+            <option value="seafood">Seafood</option>
+            <option value="bakery">Bakery</option>
+            <option value="frozen">Frozen</option>
             <option value="snacks">Snacks</option>
             <option value="beverages">Beverages</option>
             <option value="grains">Grains</option>
+            <option value="pantry">Pantry</option>
           </select>
           <input type="text" class="co-input" id="ap-img" placeholder="IMAGE URL" />
           <textarea class="co-input" id="ap-desc" placeholder="DESCRIPTION" rows="3"></textarea>

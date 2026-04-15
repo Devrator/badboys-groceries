@@ -6,7 +6,18 @@
     "category": "fruits",
     "stock": 120,
     "description": "Nano-enhanced Fuji apples from the hydroponic towers of Neo-Mumbai.",
-    "image_url": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=500&q=80",
+    "weight": "1 kg",
+    "unit": "piece",
+    "rating": 4.5,
+    "reviews": 128,
+    "nutritional_info": {
+      "calories": 52,
+      "protein": "0.3g",
+      "carbs": "14g",
+      "fat": "0.2g"
+    },
+    "featured": true
   },
   {
     "id": 2,
@@ -15,7 +26,18 @@
     "category": "fruits",
     "stock": 80,
     "description": "Premium Alphonso mangoes irradiated for peak bio-ripeness.",
-    "image_url": "https://images.unsplash.com/photo-1553279768-865429fa0078?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1553279768-865429fa0078?w=500&q=80",
+    "weight": "500 g",
+    "unit": "piece",
+    "rating": 4.8,
+    "reviews": 95,
+    "nutritional_info": {
+      "calories": 60,
+      "protein": "0.8g",
+      "carbs": "15g",
+      "fat": "0.4g"
+    },
+    "featured": true
   },
   {
     "id": 3,
@@ -24,7 +46,18 @@
     "category": "fruits",
     "stock": 200,
     "description": "Molecularly-structured Cavendish. Potassium off-chart.",
-    "image_url": "https://images.unsplash.com/photo-1543218024-57a70143c369?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1543218024-57a70143c369?w=500&q=80",
+    "weight": "1 dozen",
+    "unit": "bunch",
+    "rating": 4.3,
+    "reviews": 156,
+    "nutritional_info": {
+      "calories": 105,
+      "protein": "1.3g",
+      "carbs": "27g",
+      "fat": "0.4g"
+    },
+    "featured": false
   },
   {
     "id": 4,
@@ -33,7 +66,18 @@
     "category": "fruits",
     "stock": 55,
     "description": "Mixed antioxidant berries — lab-certified freshness.",
-    "image_url": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=500&q=80",
+    "weight": "250 g",
+    "unit": "box",
+    "rating": 4.7,
+    "reviews": 87,
+    "nutritional_info": {
+      "calories": 43,
+      "protein": "0.7g",
+      "carbs": "10g",
+      "fat": "0.3g"
+    },
+    "featured": true
   },
   {
     "id": 5,
@@ -42,7 +86,18 @@
     "category": "veggies",
     "stock": 90,
     "description": "Bioluminescent-grade organic broccoli.",
-    "image_url": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=500&q=80",
+    "weight": "500 g",
+    "unit": "bunch",
+    "rating": 4.4,
+    "reviews": 64,
+    "nutritional_info": {
+      "calories": 34,
+      "protein": "2.8g",
+      "carbs": "7g",
+      "fat": "0.4g"
+    },
+    "featured": false
   },
   {
     "id": 6,
@@ -51,7 +106,18 @@
     "category": "veggies",
     "stock": 150,
     "description": "Vine-ripened in LED farms. Resolution: 4K flavor.",
-    "image_url": "https://images.unsplash.com/photo-1471194402529-8e0f5cf8d51f?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1471194402529-8e0f5cf8d51f?w=500&q=80",
+    "weight": "1 kg",
+    "unit": "kg",
+    "rating": 4.2,
+    "reviews": 112,
+    "nutritional_info": {
+      "calories": 18,
+      "protein": "0.9g",
+      "carbs": "3.9g",
+      "fat": "0.2g"
+    },
+    "featured": false
   },
   {
     "id": 7,
@@ -60,7 +126,18 @@
     "category": "veggies",
     "stock": 110,
     "description": "Iron-fortified nano-spinach from orbital stations.",
-    "image_url": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=500&q=80",
+    "weight": "300 g",
+    "unit": "bunch",
+    "rating": 4.6,
+    "reviews": 73,
+    "nutritional_info": {
+      "calories": 23,
+      "protein": "2.9g",
+      "carbs": "3.6g",
+      "fat": "0.4g"
+    },
+    "featured": true
   },
   {
     "id": 8,
@@ -69,7 +146,18 @@
     "category": "veggies",
     "stock": 180,
     "description": "Beta-carotene enhanced. Max crunch rating.",
-    "image_url": "https://images.unsplash.com/photo-1447175008436-054170c2e979?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1447175008436-054170c2e979?w=500&q=80",
+    "weight": "500 g",
+    "unit": "bunch",
+    "rating": 4.1,
+    "reviews": 98,
+    "nutritional_info": {
+      "calories": 41,
+      "protein": "0.9g",
+      "carbs": "10g",
+      "fat": "0.2g"
+    },
+    "featured": false
   },
   {
     "id": 9,
@@ -78,7 +166,18 @@
     "category": "dairy",
     "stock": 75,
     "description": "Ultra-pasteurized. Full-fat cyber grade.",
-    "image_url": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=500&q=80",
+    "weight": "1 L",
+    "unit": "carton",
+    "rating": 4.7,
+    "reviews": 203,
+    "nutritional_info": {
+      "calories": 61,
+      "protein": "3.2g",
+      "carbs": "4.8g",
+      "fat": "3.3g"
+    },
+    "featured": true
   },
   {
     "id": 10,
@@ -87,78 +186,417 @@
     "category": "dairy",
     "stock": 40,
     "description": "Cryo-vault aged 60 days. Sharp and cyber-smooth.",
-    "image_url": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a318?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a318?w=500&q=80",
+    "weight": "200 g",
+    "unit": "block",
+    "rating": 4.5,
+    "reviews": 87,
+    "nutritional_info": {
+      "calories": 402,
+      "protein": "25g",
+      "carbs": "1.3g",
+      "fat": "33g"
+    },
+    "featured": false
   },
   {
     "id": 11,
+    "name": "Volt Yoghurt",
+    "price": 95,
+    "category": "dairy",
+    "stock": 65,
+    "description": "Probiotic-enhanced live culture yoghurt with neon berry swirl.",
+    "image_url": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500&q=80",
+    "weight": "150 g",
+    "unit": "cup",
+    "rating": 4.3,
+    "reviews": 145,
+    "nutritional_info": {
+      "calories": 59,
+      "protein": "10g",
+      "carbs": "3.6g",
+      "fat": "0.4g"
+    },
+    "featured": true
+  },
+  {
+    "id": 12,
     "name": "Plasma Chips",
     "price": 35,
     "category": "snacks",
     "stock": 300,
     "description": "Fried in arc-energy oil. Max overdrive crunch.",
-    "image_url": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=500&q=80",
+    "weight": "150 g",
+    "unit": "pack",
+    "rating": 4.0,
+    "reviews": 215,
+    "nutritional_info": {
+      "calories": 536,
+      "protein": "7g",
+      "carbs": "53g",
+      "fat": "32g"
+    },
+    "featured": false
   },
   {
-    "id": 12,
+    "id": 13,
     "name": "Dark Matter Bar",
     "price": 65,
     "category": "snacks",
     "stock": 220,
     "description": "40g protein — forged in the void. Zero sugar.",
-    "image_url": "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=500&q=80",
+    "weight": "60 g",
+    "unit": "bar",
+    "rating": 4.6,
+    "reviews": 178,
+    "nutritional_info": {
+      "calories": 230,
+      "protein": "40g",
+      "carbs": "9g",
+      "fat": "7g"
+    },
+    "featured": true
   },
   {
-    "id": 13,
+    "id": 14,
+    "name": "Reactor Nuts",
+    "price": 120,
+    "category": "snacks",
+    "stock": 85,
+    "description": "Mixed premium nuts charged with nano-selenium. High energy.",
+    "image_url": "https://images.unsplash.com/photo-1536591375849-f63e67bae4f8?w=500&q=80",
+    "weight": "200 g",
+    "unit": "pack",
+    "rating": 4.4,
+    "reviews": 92,
+    "nutritional_info": {
+      "calories": 607,
+      "protein": "20g",
+      "carbs": "21g",
+      "fat": "54g"
+    },
+    "featured": false
+  },
+  {
+    "id": 15,
     "name": "Grid Coffee",
     "price": 299,
     "category": "beverages",
     "stock": 50,
     "description": "Arabica in zero-G labs. Brews at warp speed.",
-    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80",
+    "weight": "250 g",
+    "unit": "bag",
+    "rating": 4.9,
+    "reviews": 231,
+    "nutritional_info": {
+      "calories": 2,
+      "protein": "0.3g",
+      "carbs": "0g",
+      "fat": "0g"
+    },
+    "featured": true
   },
   {
-    "id": 14,
+    "id": 16,
     "name": "Volt Energy",
     "price": 80,
     "category": "beverages",
     "stock": 180,
     "description": "Electrolyte surge in every can.",
-    "image_url": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1622543925917-763c34d1a86e?w=500&q=80",
+    "weight": "250 ml",
+    "unit": "can",
+    "rating": 4.2,
+    "reviews": 156,
+    "nutritional_info": {
+      "calories": 110,
+      "protein": "0g",
+      "carbs": "28g",
+      "fat": "0g"
+    },
+    "featured": false
   },
   {
-    "id": 15,
+    "id": 17,
     "name": "Neon OJ",
     "price": 90,
     "category": "beverages",
     "stock": 120,
     "description": "Cold-pressed in fluorescent orchards.",
-    "image_url": "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=500&q=80",
+    "weight": "1 L",
+    "unit": "bottle",
+    "rating": 4.5,
+    "reviews": 134,
+    "nutritional_info": {
+      "calories": 45,
+      "protein": "0.7g",
+      "carbs": "10g",
+      "fat": "0.2g"
+    },
+    "featured": true
   },
   {
-    "id": 16,
+    "id": 18,
     "name": "Cyber Rice",
     "price": 85,
     "category": "grains",
     "stock": 200,
     "description": "Basmati aged in sealed vaults. Extra long grain.",
-    "image_url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&q=80",
+    "weight": "5 kg",
+    "unit": "bag",
+    "rating": 4.3,
+    "reviews": 89,
+    "nutritional_info": {
+      "calories": 130,
+      "protein": "2.7g",
+      "carbs": "28g",
+      "fat": "0.3g"
+    },
+    "featured": false
   },
   {
-    "id": 17,
+    "id": 19,
     "name": "Quantum Wheat",
     "price": 70,
     "category": "grains",
     "stock": 150,
     "description": "Fortified whole wheat from orbital greenhouses.",
-    "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80",
+    "weight": "2 kg",
+    "unit": "bag",
+    "rating": 4.1,
+    "reviews": 76,
+    "nutritional_info": {
+      "calories": 340,
+      "protein": "13g",
+      "carbs": "72g",
+      "fat": "2.5g"
+    },
+    "featured": false
   },
   {
-    "id": 18,
+    "id": 20,
     "name": "Matrix Oats",
     "price": 110,
     "category": "grains",
     "stock": 90,
     "description": "Rolled in nano-mills. High beta-glucan.",
-    "image_url": "https://images.unsplash.com/photo-1505253304499-671c55fb57fe?w=500&q=80"
+    "image_url": "https://images.unsplash.com/photo-1505253304499-671c55fb57fe?w=500&q=80",
+    "weight": "1 kg",
+    "unit": "canister",
+    "rating": 4.4,
+    "reviews": 112,
+    "nutritional_info": {
+      "calories": 389,
+      "protein": "17g",
+      "carbs": "66g",
+      "fat": "7g"
+    },
+    "featured": true
+  },
+  {
+    "id": 21,
+    "name": "Cyber Chicken Breast",
+    "price": 220,
+    "category": "meat",
+    "stock": 60,
+    "description": "Lab-cultured, zero-antibiotic chicken breast. High protein, low fat.",
+    "image_url": "https://images.unsplash.com/photo-1604503468506-a8da13919157?w=500&q=80",
+    "weight": "500 g",
+    "unit": "pack",
+    "rating": 4.7,
+    "reviews": 143,
+    "nutritional_info": {
+      "calories": 165,
+      "protein": "31g",
+      "carbs": "0g",
+      "fat": "3.6g"
+    },
+    "featured": true
+  },
+  {
+    "id": 22,
+    "name": "Quantum Salmon Fillet",
+    "price": 350,
+    "category": "seafood",
+    "stock": 35,
+    "description": "Omega-3 rich Atlantic salmon, sustainably sourced from deep-sea farms.",
+    "image_url": "https://images.unsplash.com/photo-1519708227418-c8fd9a3a2743?w=500&q=80",
+    "weight": "400 g",
+    "unit": "fillet",
+    "rating": 4.8,
+    "reviews": 97,
+    "nutritional_info": {
+      "calories": 208,
+      "protein": "20g",
+      "carbs": "0g",
+      "fat": "13g"
+    },
+    "featured": true
+  },
+  {
+    "id": 23,
+    "name": "Synth Beef Mince",
+    "price": 180,
+    "category": "meat",
+    "stock": 45,
+    "description": "Plant-based beef alternative with identical texture and flavor profile.",
+    "image_url": "https://images.unsplash.com/photo-1592187270271-9a4b84faa228?w=500&q=80",
+    "weight": "500 g",
+    "unit": "pack",
+    "rating": 4.3,
+    "reviews": 88,
+    "nutritional_info": {
+      "calories": 250,
+      "protein": "22g",
+      "carbs": "8g",
+      "fat": "15g"
+    },
+    "featured": false
+  },
+  {
+    "id": 24,
+    "name": "Neon Shrimp",
+    "price": 280,
+    "category": "seafood",
+    "stock": 25,
+    "description": "Wild-caught tiger prawns, flash-frozen at peak freshness.",
+    "image_url": "https://images.unsplash.com/photo-1592187270271-9a4b84faa228?w=500&q=80",
+    "weight": "300 g",
+    "unit": "pack",
+    "rating": 4.6,
+    "reviews": 67,
+    "nutritional_info": {
+      "calories": 99,
+      "protein": "24g",
+      "carbs": "0.2g",
+      "fat": "0.3g"
+    },
+    "featured": true
+  },
+  {
+    "id": 25,
+    "name": "Cyber Croissant",
+    "price": 45,
+    "category": "bakery",
+    "stock": 100,
+    "description": "Buttery, flaky layers baked fresh daily in our nano-ovens.",
+    "image_url": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=500&q=80",
+    "weight": "80 g",
+    "unit": "piece",
+    "rating": 4.5,
+    "reviews": 178,
+    "nutritional_info": {
+      "calories": 231,
+      "protein": "5g",
+      "carbs": "26g",
+      "fat": "12g"
+    },
+    "featured": true
+  },
+  {
+    "id": 26,
+    "name": "Quantum Sourdough",
+    "price": 85,
+    "category": "bakery",
+    "stock": 40,
+    "description": "Traditional 72-hour fermentation with ancient grain blend.",
+    "image_url": "https://images.unsplash.com/photo-1586444248906-89e48c41f234?w=500&q=80",
+    "weight": "700 g",
+    "unit": "loaf",
+    "rating": 4.7,
+    "reviews": 134,
+    "nutritional_info": {
+      "calories": 250,
+      "protein": "9g",
+      "carbs": "48g",
+      "fat": "1.5g"
+    },
+    "featured": false
+  },
+  {
+    "id": 27,
+    "name": "Holo Ice Cream",
+    "price": 120,
+    "category": "frozen",
+    "stock": 70,
+    "description": "Creamy vanilla bean ice cream with zero artificial additives.",
+    "image_url": "https://images.unsplash.com/photo-1560008581-09826d1de69e?w=500&q=80",
+    "weight": "500 ml",
+    "unit": "tub",
+    "rating": 4.6,
+    "reviews": 189,
+    "nutritional_info": {
+      "calories": 207,
+      "protein": "3.5g",
+      "carbs": "24g",
+      "fat": "11g"
+    },
+    "featured": true
+  },
+  {
+    "id": 28,
+    "name": "Matrix Frozen Pizza",
+    "price": 150,
+    "category": "frozen",
+    "stock": 55,
+    "description": "Wood-fired style pizza with premium toppings, ready in 12 mins.",
+    "image_url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80",
+    "weight": "450 g",
+    "unit": "piece",
+    "rating": 4.2,
+    "reviews": 112,
+    "nutritional_info": {
+      "calories": 266,
+      "protein": "11g",
+      "carbs": "34g",
+      "fat": "10g"
+    },
+    "featured": false
+  },
+  {
+    "id": 29,
+    "name": "Cyber Olive Oil",
+    "price": 190,
+    "category": "pantry",
+    "stock": 80,
+    "description": "Extra virgin olive oil from Mediterranean cyber-groves.",
+    "image_url": "https://images.unsplash.com/photo-1474979266404-7f28db3e3f4e?w=500&q=80",
+    "weight": "750 ml",
+    "unit": "bottle",
+    "rating": 4.8,
+    "reviews": 156,
+    "nutritional_info": {
+      "calories": 884,
+      "protein": "0g",
+      "carbs": "0g",
+      "fat": "100g"
+    },
+    "featured": true
+  },
+  {
+    "id": 30,
+    "name": "Plasma Pasta",
+    "price": 65,
+    "category": "pantry",
+    "stock": 150,
+    "description": "Durum wheat semolina pasta, bronze-cut for perfect sauce adherence.",
+    "image_url": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=500&q=80",
+    "weight": "500 g",
+    "unit": "box",
+    "rating": 4.4,
+    "reviews": 98,
+    "nutritional_info": {
+      "calories": 371,
+      "protein": "13g",
+      "carbs": "75g",
+      "fat": "1.5g"
+    },
+    "featured": false
   }
 ]
